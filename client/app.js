@@ -35,4 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const battleShipNewGame = new BattleShipNewGame ()
   battleShipNewGame.newGameToBePlayed()
   battleShipNewGame.playerGuessInput()
-});
+}).listen(process.env.PORT || 5000)
