@@ -1,0 +1,117 @@
+*{
+  margin:0;
+}
+
+body{
+  position: relative;
+  height: 100%;
+  background-image: url('../images/water-texture.jpg');
+}
+
+h1, h2, h3, h4, h5, p{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+input{
+  width:250px;
+  height:125px;
+  padding-top: 10%;
+  margin-right: 10%;
+
+  background-color: none;
+  text-align: center;
+  border-bottom: 2px solid white;
+
+}
+
+input[type="text"]{
+  border: none;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+  color: white;
+  background: transparent;
+
+}
+
+input:focus{
+  outline: none;
+}
+
+
+.user_input{
+  display: flex;
+  justify-content: center;
+  padding-left: 20%;
+}
+
+.inputForm{
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.promptText{
+  text-align: center;
+}
+
+.container {
+  display:grid;
+  justify-content: left;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows:50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  margin: 5% 10% 10%;
+}
+
+.box {
+  border-bottom: 0.5px solid #3cd070;
+  border-right: 0.5px solid #3cd070;
+
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.game-ui-layout{
+  padding-top: 2%;
+  padding-right: 10%;
+  display:flex;
+}
+
+
+.input-coordinates{
+  padding-top: 10%;
+
+  text-align: center;
+  font-size: 120px;
+}
+.battleship-logo{
+  display: flex;
+  justify-content: center;
+}
+
+#battleship-logo{
+  display: flex;
+  justify-content: center;
+  width:75%;
+  padding-bottom: 5%;
+}
+
+.miss{
+  background-color:rgba(255, 0, 0, 0.3);
+}
+
+.shipIcon{
+  width:80px;
+}
+.shipIconList{
+
+  display: inline-block;
+  width:100%;
+  padding-top: 5%;
+}
+
+.boatIcon{
+  margin-bottom: 2%;
+}

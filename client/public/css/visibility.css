@@ -1,0 +1,45 @@
+.visibility{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  margin-bottom: -10%;
+}
+
+.visibility.open {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s;
+}
+
+.clouds-container{
+  height:100px;
+  border:2px solid black;
+}
+
+#overflow-cloud{
+  position: absolute;
+   height: 100px;
+   width: 100px;
+   right: -50px;
+   top: 50px;
+}
+
+
+
+.cloud{
+  background-size: cover;
+  position: absolute;
+  width:100%;
+  z-index: -1;
+
+  opacity: 0.3;
+  padding-top: 5%;
+
+  animation: cloudMoves 30s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes cloudMoves {
+    from {right: -100%;}
+    to {right: 100%;}
+  }

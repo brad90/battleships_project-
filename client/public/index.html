@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link type="text/css" href="./css/style.css" rel="stylesheet">
+  <link type="text/css" href="./css/button.css" rel="stylesheet">
+  <link type="text/css" href="./css/overlay.css" rel="stylesheet">
+  <link type="text/css" href="./css/visibility.css" rel="stylesheet">
+  <script type="text/javascript" src="js/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+
+  <iframe src='./sound/bensound-epic.mp3'allow="autoplay" allow="loop" style="display:none" id="iframeAudio">
+  </iframe>
+
+  <audio autoplay='true' loop='true' id="audio-water" >
+  <source src= 'bensound-epic.mp3' type="audio/mpeg" >
+  </audio>
+
+  <audio autoplay loop>
+  <source id= "audio-sonar" src= "sound/zapsplat_vehicles_submarine_sonar_ping_single_28800.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- This is the OPENING page of the js  -->
+
+  <div class = "visibility" id="overlay"></div>
+  <div id="clouds-container">
+    <image class="cloud" src="./images/clouds1.png">
+    <image class="cloud" id="overflow-cloud" src="./images/clouds1.png">
+  </div>
+
+
+  <!-- This is the GAME page of the js -->
+
+  <div class="game-ui-layout">
+    <div class="container">
+      <div class="box"></div>
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+      <div class="box">G</div>
+      <div class="box">H</div>
+      <div class="box">I</div>
+      <div class="box">J</div>
+      <div class="box">1</div>
+      <div class="box" ><img class="visibility" src="./images/explosion.png" id="a1" ></div>
+      <div class="box" ><img class="visibility" src="./images/explosion.png" id="b1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i1"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j1"></div>
+      <div class="box">2</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i2"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j2"></div>
+      <div class="box">3</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="a3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="b3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="c3" ></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="d3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="e3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="f3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="g3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="h3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="i3"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png" id="j3"></div>
+      <div class="box">4</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i4"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j4"></div>
+      <div class="box">5</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i5"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j5"></div>
+      <div class="box">6</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i6"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j6"></div>
+      <div class="box">7</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i7"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j7"></div>
+      <div class="box">8</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i8"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j8"></div>
+      <div class="box">9</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h9"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i9"></div>
+      <div class="box" ><img class="visibility" src="./images/explosion.png" id="j9"></div>
+      <div class="box">10</div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="a10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="b10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="c10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="d10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="e10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="f10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="g10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="h10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="i10"></div>
+      <div class="box"><img class="visibility" src="./images/explosion.png"  id="j10"></div>
+    </div>
+
+
+    <!--This is the SIDE section of the grid  -->
+    <div class="side-info">
+
+      <div class="battlehip-logo-container">
+        <img id="battle-logo" src="./images/logo.png"></img class="visibility">
+      </div>
+      <div>
+        <h2> Enter New Co-ordinates Commander! </h2>
+      </div>
+
+      <form class="inputForm" id="input-coordinates" autocomplete="off">
+        <input type="text" class="input-coordinates" name="coordinates" maxlength="3"> </input>
+        <div>
+          <input type="submit" value = "FIRE!" id="submit-fire"> </input>
+        </div>
+      </form>
+
+      <div class="shipIconList">
+        <div class="boatIcon">
+          <h5> Submarine </h5>
+          <image class="shipIcon" src="./images/submarine.png" id="Submarine">
+          </div>
+          <div class="boatIcon">
+            <h5> Battlehips </h5>
+            <image class="shipIcon" src="./images/battleship.png" id="Battlehip1">
+              <image class="shipIcon" src="./images/battleship.png" id="Battlehip2">
+              </div>
+              <div class="boatIcon">
+                <h5> Destroyers </h5>
+                <image class="shipIcon" src="./images/battleship.png" id="Destroyer1">
+                  <image class="shipIcon" src="./images/battleship.png" id="Destroyer2">
+                  </div>
+                  <div class="boatIcon">
+                    <h5> Aircraft Carrier </h5>
+                    <image class="shipIcon" src="./images/aircraft-carrier.png" id="AircraftCarrier">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <audio src="./sound/Blastwave_FX_BankSafeExplosion_HV.37.mp3" id="audio-explosion"></audio>
+
+
+            </body>
+            </html>
