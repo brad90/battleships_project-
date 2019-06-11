@@ -9,7 +9,7 @@
     "webpack-cli": "^3.3.2"
   },
   "scripts": {
-    "build": "webpack -w",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
