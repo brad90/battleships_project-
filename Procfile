@@ -1,2 +1,2 @@
-web: node index.js
+web: node app.js
 app.listen(process.env.PORT || 3000);
